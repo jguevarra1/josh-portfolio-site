@@ -12,8 +12,10 @@
 }
 
 
-/* Force our Bitmoji image picture up in postition */
-.bitmoji {
-    position: relative;
-    top: -100px;
+/* Change the margins of our card component */
+.card-alignment {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
 }
+
