@@ -6,6 +6,19 @@
     padding: 5px;
 }
 
+/* Greys out the icons under langauges and technologies used */
+.tech-icon {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+/* Upon mouse hover, restores color in a gradual effect */
+.tech-icon:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
 /* Adjust the size of our links in the nav bar */
 .link-text-size-lg{
     font-size: 16px;
