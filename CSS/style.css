@@ -32,3 +32,8 @@
     margin-bottom: 20px;
 }
 
+#carouselHome {
+    margin-top: 40px;
+    max-height: 400px;
+    max-width: 800px;
+}
