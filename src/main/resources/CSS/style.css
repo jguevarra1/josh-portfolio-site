@@ -1,0 +1,45 @@
+/* Fix Github and LinkedIn logo icon sizing */
+.icon
+{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+/* Greys out the icons under langauges and technologies used */
+.tech-icon {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+/* Upon mouse hover, restores color in a gradual effect */
+.tech-icon:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Adjust the size of our links in the nav bar */
+.link-text-size-lg{
+    font-size: 16px;
+}
+
+
+/* Change the margins of our card component */
+.card-alignment {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+/* Adjust sizing of the carousel image in the home page */
+#carouselHome {
+    margin-top: 40px;
+    max-height: 400px;
+    max-width: 800px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: grey;
+}
