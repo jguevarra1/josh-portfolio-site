@@ -2,8 +2,12 @@ package com.portfoliosite.joshportfoliosite.Ticket;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
+@RequestMapping(value = "/")
 public class TicketController
 {
     // TODO set up the controller code
@@ -15,4 +19,6 @@ public class TicketController
     {
         this.ticketService = ticketService;
     }
+
+
 }
