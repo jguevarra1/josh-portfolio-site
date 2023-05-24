@@ -1,13 +1,24 @@
 package com.portfoliosite.joshportfoliosite.Ticket;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
+@Table
 public class Ticket
 {
-    // TODO Set up the database sequence here
+    @Id
+    @SequenceGenerator(
+            name = "ticket_sequence",
+            sequenceName = "ticket_sequence",
+            allocationSize = 1
+    )
+
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "ticket_sequence"
+    )
     private Long Id;
     private String firstName;
     private String lastName;
