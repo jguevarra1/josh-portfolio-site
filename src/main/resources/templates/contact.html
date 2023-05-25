@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--suppress ThymeleafVariablesResolveInspection -->
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
 
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="../static/CSS/style.css">
 
     <title>Josh's Portfolio Site</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -17,8 +18,8 @@
             <div class="col">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="nav-link link-text-size-lg" href=".">Home</a>
-                    <a class="nav-link link-text-size-lg" href="./projects.html">Projects</a>
-                    <a class="nav-link link-text-size-lg" href="./contact.html">Contact Me</a>
+                    <a class="nav-link link-text-size-lg" href="/projects.html">Projects</a>
+                    <a class="nav-link link-text-size-lg" href="/contact">Contact Me</a>
                 </nav>
             </div>
         </div>
@@ -37,17 +38,17 @@
 
     <!-- Beginning of contact me form -->
     <div class="container">
-        <form>
+        <form action="/submit" method="POST" th:action="@{/submit}" th:method="POST" th:object="${ticket}">
             <div class="row mb-4">
                 <div class="col">
                     <label for="formFirstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="formFirstName" placeholder="Enter your first name"
+                    <input type="text" th:field="*{firstName}" class="form-control" id="formFirstName" placeholder="Enter your first name"
                         required>
                 </div>
 
                 <div class="col">
                     <label for="formLastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="formLastName" placeholder="Enter your last name"
+                    <input type="text" th:field="*{lastName}" class="form-control" id="formLastName" placeholder="Enter your last name"
                         required>
                 </div>
             </div>
@@ -55,7 +56,7 @@
             <div class="row mb-4">
                 <div class="col">
                     <label for="formEmail" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="formEmail" placeholder="Enter your email address"
+                    <input type="email" th:field="*{email}" class="form-control" id="formEmail" placeholder="Enter your email address"
                         required>
                 </div>
             </div>
@@ -63,7 +64,7 @@
             <div class="row mb-4">
                 <div class="col">
                     <label for="formMessage" class="form-label">What's your message?</label>
-                    <textarea class="form-control" id="formMessage" placeholder="Enter your message" rows="4"
+                    <textarea class="form-control" th:field="*{message}" id="formMessage" placeholder="Enter your message" rows="4"
                         required></textarea>
                 </div>
             </div>
