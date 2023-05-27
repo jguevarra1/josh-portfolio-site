@@ -1,2 +1,5 @@
 # Ignore Mac Files
 .DS_store
+
+# Ignore application properties file
+application.properties

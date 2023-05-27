@@ -81,6 +81,7 @@ public class TicketService
         {
             throw new IllegalArgumentException("The email + " + email + " is invalid!");
         }
+
         List<Ticket> tickets = ticketRepo.findTicketByEmail(email);
 
         if (tickets.isEmpty())
