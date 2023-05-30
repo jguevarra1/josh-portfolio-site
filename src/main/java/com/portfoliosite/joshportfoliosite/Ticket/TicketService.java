@@ -53,14 +53,14 @@ public class TicketService
      */
     public Ticket findTicket(Long id)
     {
-        if (id <= 0)
+        if (id == null || id <= 0)
         {
             throw new IllegalArgumentException("The ID " + id + "is invalid!");
         }
 
         Optional<Ticket> ticket = ticketRepo.findById(id);
 
-        if (!ticket.isPresent())
+        if (ticket.isEmpty())
         {
             throw new NoSuchElementException("The ID " + id + " does not exist in the database!");
         }
@@ -86,7 +86,7 @@ public class TicketService
 
         if (tickets.isEmpty())
         {
-            throw new NoSuchElementException("The email" + email + " does not exist in the database!");
+            throw new NoSuchElementException("The email " + email + " does not exist in the database!");
         }
 
         return Collections.unmodifiableList(tickets);
@@ -99,17 +99,22 @@ public class TicketService
      */
     public List<Ticket> findTicket(LocalDate date)
     {
+        if (date == null)
+        {
+            throw new IllegalArgumentException("A date was not entered.");
+        }
+
         LocalDate dateProjectCreated = LocalDate.of(2023, 5, 10);
         LocalDate today = LocalDate.now();
 
        if (date.isBefore(dateProjectCreated))
        {
-           throw new IllegalArgumentException("The date" + date + " is an earlier date than when this website was created!");
+           throw new IllegalArgumentException("The date " + date + " is an earlier date than when this website was created!");
        }
 
        if (date.isAfter(today))
        {
-           throw new IllegalArgumentException("The date + " + date + " is a future date!");
+           throw new IllegalArgumentException("The date " + date + " is a future date!");
        }
 
        List<Ticket> tickets = ticketRepo.findTicketByDate(date);
@@ -130,12 +135,6 @@ public class TicketService
     public List<Ticket> findAll()
     {
         List<Ticket> ticket = ticketRepo.findAll();
-
-        if (ticket.isEmpty())
-        {
-            throw new NoSuchElementException("The database is empty.");
-        }
-
         return Collections.unmodifiableList(ticket);
     }
 

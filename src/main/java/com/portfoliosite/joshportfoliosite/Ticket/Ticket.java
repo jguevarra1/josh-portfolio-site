@@ -56,15 +56,15 @@ public class Ticket
     /* The date that the contact form was submitted */
     private LocalDate dateCreated;
 
-    /* Blank constructor */
+    /* Blank constructor (unused)*/
     public Ticket()
     {
         ;
     }
 
     /**
-     * Constructor for our ticket class
-     * This version of the constructor sets the date to today
+     * Constructor for our ticket class (Main constructor used in the application)
+     * This version of the constructor sets the date to the current date
      *
      * @param firstName The first name of the person who sent the contact form
      * @param lastName The last name of the person who sent the contact form
@@ -80,16 +80,39 @@ public class Ticket
     }
 
     /**
-     * Constructor for our ticket class
+     * Constructor for our ticket class (primarily used for testing)
+     * This version of the constructor sets a custom Ticket ID
+     *
+     * @param Id The custom Id to set to this ticket object
+     * @param firstName The first name of the person who sent the contact form
+     * @param lastName The last name of the person who sent the contact form
+     * @param email The person's email address
+     * @param message The message from the contact form
+     */
+    public Ticket(Long Id, String firstName, String lastName, String email, String message)
+    {
+        this.Id = Id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.message = message;
+        this.dateCreated = LocalDate.now();
+    }
+
+    /**
+     * Constructor for our ticket class (primarily used for testing)
      * This version of the constructor sets a manual date
      *
+     * @param Id The Id of the ticket
      * @param firstName The first name of the person who sent the contact form
      * @param lastName The last name of the person who sent the contact form
      * @param email The person's email address
      * @param message The message from the contact form
      * @param dateCreated A date to set when the ticket was created
      */
-    public Ticket(String firstName, String lastName, String email, String message, LocalDate dateCreated) {
+    public Ticket(Long Id, String firstName, String lastName, String email, String message, LocalDate dateCreated)
+    {
+        this.Id = Id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
