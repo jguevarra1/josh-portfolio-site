@@ -2,4 +2,4 @@
 .DS_store
 
 # Ignore application properties file
-application.propertiesapplication.properties
+application.properties
