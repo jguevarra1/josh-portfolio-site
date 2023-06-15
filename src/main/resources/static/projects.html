@@ -22,20 +22,14 @@
             </div>
         </div>
         <!-- End of nav bar -->
-
-        <div class="row">
-            <div class="col">
-                <h2 class="font-weight-lighter" style="margin-top: 10px"> Here are some of my projects!</h2>
-            </div>
-        </div>
     </div>
 
     <!-- Beginning of Search Engine project highlight section -->
-    <div class="container">
+    <div class="container" style="margin-top: 30px;">
         <div class="row">
             <div class="col-md-6">
                 <!-- Begining of image carousel for Search Engine project -->
-                <div id="carouselProject1" class="carousel slide" data-ride="carousel">
+                <div id="carouselProject1" class="carousel slide" data-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <a href="./images/search-engine-ui.png" target="_blank">
@@ -67,7 +61,7 @@
                 <!-- End of image carousel for Search Engine project -->
             </div>
 
-            <!-- Beginning of short description for Search Engine Project -->
+            <!-- Beginning of short description for Search Engine project -->
             <div class="col-md-6">
                 <h3 class="font-weight-light">Search Engine Project</h3>
                 <p class="lead">This project is a simple full stack search engine webapp that displays X amount of
@@ -85,40 +79,105 @@
                         <li>Servlets</li>
                     </ul>
                 </span>
-                <!-- End of short description for Search Engine Project-->
+                <!-- End of short description for Search Engine project-->
             </div>
         </div>
     </div>
 
-    <div class="container" style="margin-top: 60px;">
+    <div class="container" style="margin-top: 80px;">
         <div class="row">
-            <!-- Beginning of short description for Portfolio Website Project -->
+            <!-- Beginning of short description for Generic Data Fetcher project -->
             <div class="col-md-6">
-                <h3 class="font-weight-light">Portfolio Website</h3>
-                <p class="lead">This is the first ever version of my portfolio website written before I started my job
-                    with Optum.
-                    I wanted to experiment with some front-end development as well as learn some of the different
-                    Spring Boot Dependencies (Spring Web, Spring Data JPA, Thymeleaf), so I thought: why not put it all
-                    together?
+                <h3 class="font-weight-light"><a href="https://github.com/jguevarra1/generic-data-fetcher"></a>Generic Data Fetcher</h3>
+                <p class="lead">
+                    This was my senior capstone team project during Spring 2022. Led by sponsor Professor Mario Kim
+                    with Openprise, we built a web application to convert various file types to the CSV format. 
+                    I was primarily responsible for building microservices in the backend to download and convert the files
+                    using Groovy and the Micronaut framework as well as designing an object oriented database to store form
+                    inputs given from the form page to feed into our backend.
                 </p>
                 <p class="lead">To find out more, check out the repo <a
-                        href="https://github.com/jguevarra1/josh-portfolio-site" target="_blank">here</a>!</p>
+                        href="https://github.com/jguevarra1/generic-data-fetcher" target="_blank">here</a>!</p>
                 <span><em>Languages and Technology used:</em>
                     <ul>
-                        <li>Java 17</li>
-                        <li>HTML</li>
-                        <li>CSS (Bootstrap Framework)</li>
-                        <li>Spring Boot (Spring Web, Spring Data JPA, Spring Mail)</li>
+                        <li>Groovy</li>
+                        <li>Microanut</li>
+                        <li>Gradle</li>
                     </ul>
                 </span>
-                <span><em>**This is V1 of my website, future updates will be applied as I continue to learn new
-                        things!**</em></span>
-                <!-- End of short description for Portfolio Website Project-->
+                <!-- End of short description for Generic Data Fetcher project-->
             </div>
 
             <div class="col-md-6">
+                <!-- Begining of image carousel for Generic Data Fetcher project -->
+                <div id="carouselProject2" class="carousel slide" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="./images/generic-data-fetcher-ui.png" target="_blank">
+                                <img class="d-block w-100" src="./images/generic-data-fetcher-ui.png"
+                                    alt="Generic Data Fetcher UI">
+                            </a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <a href="./images/gdf-example-form.png" target="_blank">
+                                <img class="d-block w-100" src="./images/gdf-example-form.png"
+                                    alt="Generic Data Fetcher Example Form">
+                            </a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <a href="./images/gdf-updating.png" target="_blank">
+                                <img class="d-block w-100" src="./images/gdf-updating.png"
+                                    alt="Generic Data Fetcher Updating Component">
+                            </a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <a href="./images/gdf-converted-data.png" target="_blank">
+                                <img class="d-block w-100" src="./images/gdf-converted-data-cropped.png"
+                                    alt="An example of converted data">
+                            </a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <a href="./images/gdf-completed.png" target="_blank">
+                                <img class="d-block w-100" src="./images/gdf-completed.png"
+                                    alt="A view of the dashboard when a job is completed">
+                            </a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <a href="./images/gdf-success-tab.png" target="_blank">
+                                <img class="d-block w-100" src="./images/gdf-success-tab.png"
+                                    alt="A view of the success tab when you click on it">
+                            </a>
+                        </div>
+
+                        <!-- Previous button for carousel slide -->
+                        <a class="carousel-control-prev" href="#carouselProject2" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+
+                        <!-- Next button for carousel slide -->
+                        <a class="carousel-control-next" href="#carouselProject2" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- End of image carousel for Generic Data Fetcher project -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 80px;">
+        <div class="row">
+            <!-- Beginning of short description for Portfolio Website Project -->
+            <div class="col-md-6">
                 <!-- Begining of image carousel for Portfolio Website project -->
-                <div id="carouselProject2" class="carousel slide" data-ride="carousel">
+                <div id="carouselProject3" class="carousel slide" data-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <a href="./images/portfolio-ui.png" target="_blank">
@@ -143,19 +202,43 @@
                         </div>
 
                         <!-- Previous button for carousel slide -->
-                        <a class="carousel-control-prev" href="#carouselProject2" role="button" data-slide="prev">
+                        <a class="carousel-control-prev" href="#carouselProject3" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
 
                         <!-- Next button for carousel slide -->
-                        <a class="carousel-control-next" href="#carouselProject2" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#carouselProject3" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
                 </div>
                 <!-- End of image carousel for Portfolio Website project -->
+            </div>
+
+            <div class="col-md-6">
+                <h3 class="font-weight-light">Portfolio Website</h3>
+                <p class="lead">This is the first ever version of my portfolio website written before I started my job
+                    with Optum.
+                    I wanted to experiment with some front-end development as well as learn some of the different
+                    Spring Boot Dependencies (Spring Web, Spring Data JPA, etc.), so I thought: why not put it all
+                    together?
+                </p>
+                <p class="lead">To find out more, check out the repo <a
+                        href="https://github.com/jguevarra1/josh-portfolio-site" target="_blank">here</a>!</p>
+                <span><em>Languages and Technology used:</em>
+                    <ul>
+                        <li>Java 17</li>
+                        <li>HTML</li>
+                        <li>CSS (Bootstrap Framework)</li>
+                        <li>Spring Boot (Spring Web, Spring Data JPA, Spring Mail)</li>
+                        <li>JUnit 5 / AssertJ / Mockito</li>
+                    </ul>
+                </span>
+                <span><em>**This is V1 of my website, future updates will be applied as I continue to learn new
+                        things!**</em></span>
+                <!-- End of short description for Portfolio Website Project-->
             </div>
         </div>
     </div>
